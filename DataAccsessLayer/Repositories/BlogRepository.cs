@@ -21,6 +21,11 @@ namespace DataAccsessLayer.Repositories
             }
         }
 
+        public void Delete(Blog entity)
+        {
+            throw new NotImplementedException();
+        }
+
         public void DeleteBlog(Blog blog)
         {
             using (Context dbContext = new Context())
@@ -28,6 +33,11 @@ namespace DataAccsessLayer.Repositories
                 dbContext.Blogs.Remove(blog);
                 dbContext.SaveChanges();
             }
+        }
+
+        public List<Blog> GetAllList()
+        {
+            throw new NotImplementedException();
         }
 
         public Blog GetByID(int id)
@@ -38,12 +48,22 @@ namespace DataAccsessLayer.Repositories
             }
         }
 
+        public void Insert(Blog entity)
+        {
+            throw new NotImplementedException();
+        }
+
         public List<Blog> ListAllBlog()
         {
             using (Context dbContext = new Context())
             {
                 return dbContext.Blogs.ToList();
             }
+        }
+
+        public void Update(Blog entity)
+        {
+            throw new NotImplementedException();
         }
 
         public void UpdateBlog(Blog blog)

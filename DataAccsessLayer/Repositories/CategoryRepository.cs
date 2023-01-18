@@ -19,10 +19,20 @@ namespace DataAccsessLayer.Repositories
             dbContext.SaveChanges();
         }
 
+        public void Delete(Category entity)
+        {
+            throw new NotImplementedException();
+        }
+
         public void DeleteCategory(Category category)
         {
             dbContext.Remove(category);
             dbContext.SaveChanges();
+        }
+
+        public List<Category> GetAllList()
+        {
+            throw new NotImplementedException();
         }
 
         public Category GetByID(int id)
@@ -30,9 +40,19 @@ namespace DataAccsessLayer.Repositories
             return dbContext.Categories.Find(id);
         }
 
+        public void Insert(Category entity)
+        {
+            throw new NotImplementedException();
+        }
+
         public List<Category> ListAllCategory()
         {
             return dbContext.Categories.ToList();
+        }
+
+        public void Update(Category entity)
+        {
+            throw new NotImplementedException();
         }
 
         public void UpdateCategory(Category category)
