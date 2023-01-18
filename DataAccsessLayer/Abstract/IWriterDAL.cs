@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace DataAccsessLayer.Abstract
 {
-    public interface ICategoryDAL : IGenericDAL<Category>
+    public interface IWriterDAL : IGenericDAL<Writer>
     {
-
+        
     }
 }
