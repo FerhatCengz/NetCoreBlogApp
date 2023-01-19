@@ -1,5 +1,5 @@
 ﻿using BusinessLayer.Concrete;
-using BusinessLayer.EntityFreamwork;
+using DataAccsessLayer.EntityFreamwork;
 using EntityLayer.Concrete;
 using Microsoft.AspNetCore.Mvc;
 

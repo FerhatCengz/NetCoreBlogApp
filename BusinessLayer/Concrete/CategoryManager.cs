@@ -1,5 +1,5 @@
 ﻿using BusinessLayer.Abstract;
-using BusinessLayer.EntityFreamwork;
+using DataAccsessLayer.EntityFreamwork;
 using DataAccsessLayer.Abstract;
 using DataAccsessLayer.Repositories;
 using EntityLayer.Concrete;

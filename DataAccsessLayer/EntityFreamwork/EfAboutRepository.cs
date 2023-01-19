@@ -7,9 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BusinessLayer.EntityFreamwork
+namespace DataAccsessLayer.EntityFreamwork
 {
-    public class EfWriterRepository : GenericRepository<Writer> , IWriterDAL
+    public class EfAboutRepository : GenericRepository<About> , IAboutDAL
     {
     }
 }

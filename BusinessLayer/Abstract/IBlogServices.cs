@@ -1,4 +1,5 @@
-﻿using EntityLayer.Concrete;
+﻿using DataAccsessLayer.Abstract;
+using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,12 +8,17 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Abstract
 {
-	public interface IBlogServices
-	{
-		void BlogAdd(Blog blog);
-		void BlogUpdate(Blog blog);
-		void BlogDelete(Blog blog);
-		List<Blog> BlogGetList();
-		Blog BlogGetByID(int id);
-	}
+    public interface IBlogServices
+    {
+        void BlogAdd(Blog blog);
+        void BlogUpdate(Blog blog);
+        void BlogDelete(Blog blog);
+        List<Blog> BlogGetList();
+        Blog BlogGetByID(int id);
+
+        List<Blog> BussinessGetBlogWithCategoryToList();
+
+        List<Blog> BlogGetList(int id);
+
+    }
 }

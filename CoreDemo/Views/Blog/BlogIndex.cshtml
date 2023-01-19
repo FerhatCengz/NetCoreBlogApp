@@ -14,6 +14,8 @@
                 <div class="row">
                     @foreach (var blogItem in Model)
                     {
+
+
                         <div class="col-lg-4 card mt-5 mb-5">
                             <a href="single.html">
                                 <img src="~/@blogItem.BlogImage" class="card-img-top img-fluid" alt="">
@@ -22,7 +24,7 @@
                                 <ul class="blog-icons my-4">
                                     <li>
                                         <a href="#">
-                                            <i class="far fa-calendar-alt"></i> @blogItem.BlogCreateDate.ToShortDateString()
+                                            <i class="far fa-calendar-alt"></i> @blogItem.BlogCreateDate.ToString("dd-MMM-yyyy")
                                         </a>
                                     </li>
                                     <li class="mx-2">
@@ -32,18 +34,23 @@
                                     </li>
                                     <li>
                                         <a href="#">
-                                            <i class="fas fa-eye"></i> @blogItem.CategoryID
+                                            <i class="fas fa-eye"></i> @blogItem.Category.CategoryName
                                         </a>
                                     </li>
 
                                 </ul>
                                 <h5 class="card-title">
-                                    <a href="single.html">@blogItem.BlogTitle</a>
+                                    <a href="~/Blog/BlogReadAll/@blogItem.BlogID">
+                                        @blogItem.BlogTitle
+                                    </a>
                                 </h5>
-                                <p class="card-text mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt.. </p>
-                                <a href="single.html" class="btn btn-primary read-m">Read More</a>
+
+
+                                <p class="card-text mb-3">@blogItem.BlogContent.Substring(0,blogItem.BlogContent.Substring(0,130).LastIndexOf(" ")) ...</p>
+                                <a href="~/Blog/BlogReadAll/@blogItem.BlogID" class="btn btn-primary read-m">Read More</a>
                             </div>
                         </div>
+
 
                     }
 

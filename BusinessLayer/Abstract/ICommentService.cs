@@ -5,11 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccsessLayer.Abstract
+namespace BusinessLayer.Abstract
 {
-    public interface IBlogDAL : IGenericDAL<Blog>
+    public interface ICommentService
     {
-        List<Blog> GetBlogWithCategoryToList();
-
+        void CommentAdd(Comment comment);
+        List<Comment> CommentGetList(int id);
     }
 }

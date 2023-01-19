@@ -19,6 +19,8 @@ namespace BusinessLayer.Concrete
 			_blogDal = blogDal;
 		}
 
+
+
 		public void BlogAdd(Blog blog)
 		{
 			_blogDal.Insert(blog);
@@ -41,9 +43,19 @@ namespace BusinessLayer.Concrete
 			return _blogDal.GetAllList();
 		}
 
+		public List<Blog> BlogGetList(int id)
+		{
+			return _blogDal.GetAllList(x => x.BlogID == id);
+		}
+
 		public void BlogUpdate(Blog blog)
 		{
 			_blogDal.Update(blog);
+		}
+
+		public List<Blog> BussinessGetBlogWithCategoryToList()
+		{
+			return _blogDal.GetBlogWithCategoryToList();
 		}
 	}
 }
