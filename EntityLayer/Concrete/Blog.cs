@@ -7,28 +7,28 @@ using System.Threading.Tasks;
 
 namespace EntityLayer.Concrete
 {
-    public class Blog
-    {
-        [Key]
-        public int BlogID { get; set; }
-        public string BlogTitle { get; set; }
-        public string BlogContent { get; set; }
-        public string BlogThumbnailImage { get; set; }
-        public string BlogImage { get; set; }
-        public DateTime BlogCreateDate { get; set; }
-        public bool BlogStatus { get; set; }
+	public class Blog
+	{
+		[Key]
+		public int BlogID { get; set; }
+		public string BlogTitle { get; set; }
+		public string BlogContent { get; set; }
+		public string BlogThumbnailImage { get; set; }
+		public string BlogImage { get; set; }
+		public DateTime BlogCreateDate { get; set; }
+		public bool BlogStatus { get; set; }
 
 
-        /*
+		/*
          Category tablosunda ki ID kısmını bir'den çok olarak alınacak
             Ve Category tablosuna ilişkil olması adına bir adet category tablosundan bir özellik eklemem
             lazım
          */
 
-        public int CategoryID { get; set; }
+		public int CategoryID { get; set; }
 
-        public Category Category { get; set; }
-        /*
+		public Category Category { get; set; }
+		/*
             Burada ise CategoryID adında bir sutun eklenir.
             Ve sisteme bu kodda 'public Category Category { get; set; }' şunu söylenir
             Benim Category tablom ile eşleş
@@ -45,9 +45,9 @@ namespace EntityLayer.Concrete
 
 
 
-        //Comments (Yorum Tablosu) Kısmı İçin
-        //Bu örnekten sonra Blog(Bire) - Çok(Comments tablosu) olacak şekilde yapılandıralım
-        /*
+		//Comments (Yorum Tablosu) Kısmı İçin
+		//Bu örnekten sonra Blog(Bire) - Çok(Comments tablosu) olacak şekilde yapılandıralım
+		/*
             Nede olsa Yorumlar kısmı çok olmaayacak mı ?
             Evet Olacak !
             O zaman şöyle yapılandıracağız 
@@ -57,7 +57,10 @@ namespace EntityLayer.Concrete
             
          */
 
-        List<Comment> Comments { get; set; }
+		List<Comment> Comments { get; set; }
 
-    }
+        //Writer 
+        public int WriterID { get; set; }
+        public Writer Writer { get; set; }
+	}
 }

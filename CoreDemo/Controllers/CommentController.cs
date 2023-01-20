@@ -19,6 +19,7 @@ namespace CoreDemo.Controllers
 
         public PartialViewResult PartialCommentListByBlog(int id)
         {
+            
             return PartialView(_manager.CommentGetList(id));
         }
     }

@@ -1,0 +1,29 @@
+﻿@using EntityLayer.Concrete;
+@model IEnumerable<Blog>
+
+<div class="tech-btm">
+    <h4>Yazarın Diğer Yazıları</h4>
+
+    @foreach (var writerBlogItem in Model)
+    {
+        <div class="blog-grids row mb-3">
+            <div class="col-md-5 blog-grid-left">
+                <a href="single.html">
+                    <img src="~/@writerBlogItem.BlogImage" class="img-fluid" alt="">
+                </a>
+            </div>
+            <div class="col-md-7 blog-grid-right">
+                <p class="font-weight-bold text-dark">@writerBlogItem.BlogTitle</p>
+                <h5>
+                    <a class="card-text mb-3">@writerBlogItem.BlogContent.Substring(0,writerBlogItem.BlogContent.Substring(0,130).LastIndexOf(" ")) ...</a>
+                </h5>
+                <div class="sub-meta">
+                    <span>
+                        <i class="far fa-clock"></i> @writerBlogItem.BlogCreateDate.ToString("dd-MMM-yyyy")
+                    </span>
+                </div>
+            </div>
+
+        </div>
+    }
+</div>

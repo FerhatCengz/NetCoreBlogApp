@@ -2,7 +2,8 @@
 
 
 <div class="comment-top">
-    <h4>Yorumlar</h4>
+    @Html.Raw(Model.Count() == 0 ? "<p class='lead'>Bu Bloga Henüz Yorum Yapılmadı. İlk Yorumu Siz Yapmak İster misiniz ?</p>" : "<h4>Yorumlar</h4>")
+
     @foreach (var commentItem in Model)
     {
         <div class="media">
@@ -16,3 +17,4 @@
         </div>
     }
 </div>
+
